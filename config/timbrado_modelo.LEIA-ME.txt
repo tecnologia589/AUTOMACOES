@@ -1,0 +1,26 @@
+===========================================================================
+ TIMBRADO DO ESCRITORIO - Corbelino Advogados Associados
+===========================================================================
+
+O agente operacional (CORBELINO.IA) gera TODA peca juridica no papel timbrado do
+escritorio. Para isso, o escritorio deve fornecer o timbrado DELE neste local:
+
+    config/timbrado_modelo.docx
+
+REQUISITOS DO ARQUIVO:
+  - Formato: .docx (Microsoft Word).
+  - Deve conter o cabecalho, a logo e o rodape oficiais do escritorio
+    (definidos como HEADER e FOOTER da secao do Word).
+  - O CORPO do documento pode estar vazio: o motor limpa o corpo e insere a
+    peca gerada, preservando cabecalho, rodape e margens.
+  - Margens sugeridas (padrao do escritorio): topo 3cm, base 1,6cm,
+    esquerda 3cm, direita 3cm. O motor reaplica essas margens.
+
+OBSERVACOES:
+  - NENHUM timbrado de outro escritorio acompanha esta entrega. Este arquivo e
+    apenas a instrucao; o .docx real e responsabilidade do escritorio.
+  - Enquanto config/timbrado_modelo.docx nao existir, a geracao de pecas falha
+    com erro explicito ("Timbrado nao encontrado").
+  - NAO versionar o timbrado em repositorio publico se ele contiver dados
+    sensiveis (assinaturas, registros internos).
+===========================================================================

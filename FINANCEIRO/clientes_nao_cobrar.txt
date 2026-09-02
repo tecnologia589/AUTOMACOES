@@ -1,0 +1,4 @@
+# Clientes que NAO devem ser cobrados pela cobranca_semanal.py
+# Um cliente por linha. Pode usar o nome (parcial, MAIUSCULO) ou o ID Asaas (cus_...).
+# Linhas iniciadas por # sao ignoradas.
+# TODO (onboarding): o escritorio preenche conforme as proprias politicas. Comeca vazio.

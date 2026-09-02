@@ -1,0 +1,37 @@
+# Segredos / credenciais - NUNCA versionar
+config/.env
+config/credentials.json
+config/oauth_credentials.json
+config/token.json
+config/token*.json
+config/*.bak
+config/timbrado_modelo.docx
+config/timbrado_modelo_REFERENCIA.pdf
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# Logs e cache do agente
+OPERACIONAL/agente_operacional/logs/*
+!OPERACIONAL/agente_operacional/logs/.gitkeep
+OPERACIONAL/agente_operacional/pops_cache/*
+!OPERACIONAL/agente_operacional/pops_cache/.gitkeep
+
+# Relatorios / saidas geradas
+FINANCEIRO/relatorio_*.txt
+FINANCEIRO/*.xlsx
+FINANCEIRO/*.pdf
+*.tmp
+tmp/
+
+# Arquivos pessoais do SO
+Thumbs.db
+.DS_Store
+
+# Material interno do provedor (briefing/onboarding) - nao versionar no repo do cliente
+_briefing/

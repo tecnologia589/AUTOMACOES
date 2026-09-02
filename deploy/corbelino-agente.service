@@ -1,0 +1,24 @@
+# =============================================================================
+#  systemd unit - Agente CORBELINO.IA (FastAPI / uvicorn na porta 8787)
+#  Instalar em: /etc/systemd/system/corbelino-agente.service
+#  Ajuste User= e os caminhos (WorkingDirectory/ExecStart) para o seu ambiente.
+# =============================================================================
+[Unit]
+Description=Agente Operacional CORBELINO.IA (webhook FastAPI)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=deploy
+WorkingDirectory=/home/deploy/corbelino-advogados
+# .env e lido pelo proprio codigo (config/.env via python-dotenv); nao precisa EnvironmentFile.
+ExecStart=/home/deploy/corbelino-advogados/.venv/bin/python -m uvicorn OPERACIONAL.agente_operacional.webhook:app --host 0.0.0.0 --port 8787
+Restart=always
+RestartSec=5
+# Logs vao pro journald (ver com: journalctl -u corbelino-agente -f)
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
